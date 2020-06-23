@@ -1,14 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import firstMag from '../img/home/hand_mag.png';
-import introMag from '../img/home/intro_mag.png';
 
-const Container = styled.div`
+import handMag from '../img/home/hand_mag.png';
+import introMag from '../img/home/intro_mag.png';
+import imagesTree from '../img/home/images_tree.png';
+
+const Container = styled.article`
   width: 100%;
   display: flex;
 `
 
-const Square = styled.div`
+const Square = styled.section`
   background-color: #F7F1DC;
   margin-left: 5%;
   margin-top: 60px;
@@ -23,20 +25,21 @@ const Mag = styled.img`
   width: 100%;
 `
 
-const BlueSquare = styled.div`
+const BlueSquare = styled.section`
   background-color: #48A09F;
   width: 30%;
-  height: 300px;
+  height: 270px;
   z-index: 1;
   position: absolute;
-  right: 8%;
-  margin-top: 14%;
-  padding: 35px;
+  right: 6%;
+  margin-top: 15%;
+  padding: 45px;
   color: white;
 
   h1 {
     background-color: #48A09F;
     line-height: 1.4em;
+    font-size: 30px;
   }
 
   p {
@@ -48,22 +51,21 @@ const BlueSquare = styled.div`
   .more {
     font-style: italic;
   }
-
 `
 
-const Carousel = styled.div`
+const Carousel = styled.article`
   height: 550px;
   width: 100%;
 `
 
-const StoryTelling = styled.div`
+const StoryTelling = styled.article`
   background-color: #F7F1DC;
   height: 680px;
   width: 100%;
   display: flex;
 `
 
-const Left = styled.div`
+const Left = styled.section`
   background-color: #F7F1DC;
   margin: auto 0;
   max-width: 44%;
@@ -73,7 +75,7 @@ const IntroMag = styled.img`
   background: transparent;
 `
 
-const StoryContent = styled.div`
+const StoryContent = styled.section`
   background-color: #F7F1DC;
   margin: auto 0;
 
@@ -113,12 +115,22 @@ const Engage = styled.button`
   font-weight: 600;
 `
 
+const Explanations = styled.article`
+  background-color: #FEFBF1;
+`
+const ImagesTree = styled.img`
+  display: block;
+  margin: 10% 5% 10% 5%;
+
+`
+
+
 const Home = () => {
   return (
-      <div>
+      <main>
         <Container>
           <Square>
-            <Mag src={firstMag} alt="mag"/>
+            <Mag src={handMag} alt="mag"/>
           </Square>
           <BlueSquare>
             <h1>Des milliers de sujets. Histoire, humour, et humain</h1>
@@ -142,7 +154,26 @@ const Home = () => {
             <Engage>Engager mon entreprise</Engage>
           </StoryContent>
         </StoryTelling>
-      </div>
+
+        <Explanations>
+          <ImagesTree src={imagesTree} alt="image_tree" />
+            <ul>
+              <li>
+                <h3>Un label engagé</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque commodo ac vitae convallis molestie id. Aliquet mus vulputate sagittis.</p>
+              </li>
+              <li>
+                <h3>Des solutions apportés</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque commodo ac vitae convallis molestie id. Aliquet mus vulputate sagittis.</p>
+              </li>
+              <li>
+                <h3>Des mouvements positifs</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque commodo ac vitae convallis molestie id. Aliquet mus vulputate sagittis.</p>
+              </li>
+            </ul>
+        </Explanations>
+
+      </main>
     )
   }
 
