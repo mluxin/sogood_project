@@ -90,6 +90,7 @@ const StoryContent = styled.section`
     padding-right: 10%;
     line-height: 25px;
     font-size: 15px;
+    font-weight: 300;
   }
 `
 
@@ -120,8 +121,30 @@ const Explanations = styled.article`
 `
 const ImagesTree = styled.img`
   display: block;
-  margin: 10% 5% 10% 5%;
+  margin: 10% 8% 10% 8%;
+`
+const Values = styled.ul`
+  columns: 3;
+  list-style-type: none;
+  margin-right: 8%;
+  margin-left: 8%;
+`
 
+const Cell = styled.li`
+  margin-bottom: 15%;
+  width: 90%;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+  }
 `
 
 
@@ -157,20 +180,32 @@ const Home = () => {
 
         <Explanations>
           <ImagesTree src={imagesTree} alt="image_tree" />
-            <ul>
-              <li>
+            <Values>
+              <Cell>
                 <h3>Un label engagé</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque commodo ac vitae convallis molestie id. Aliquet mus vulputate sagittis.</p>
-              </li>
-              <li>
+              </Cell>
+              <Cell>
                 <h3>Des solutions apportés</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque commodo ac vitae convallis molestie id. Aliquet mus vulputate sagittis.</p>
-              </li>
-              <li>
+              </Cell>
+              <Cell>
                 <h3>Des mouvements positifs</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque commodo ac vitae convallis molestie id. Aliquet mus vulputate sagittis.</p>
-              </li>
-            </ul>
+              </Cell>
+              <Cell>
+                <h3>Un label engagé</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque commodo ac vitae convallis molestie id. Aliquet mus vulputate sagittis.</p>
+              </Cell>
+              <Cell>
+                <h3>Des solutions apportés</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque commodo ac vitae convallis molestie id. Aliquet mus vulputate sagittis.</p>
+              </Cell>
+              <Cell>
+                <h3>Des mouvements positifs</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque commodo ac vitae convallis molestie id. Aliquet mus vulputate sagittis.</p>
+              </Cell>
+            </Values>
         </Explanations>
 
       </main>
